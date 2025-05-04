@@ -18,24 +18,8 @@ botonEnviar.addEventListener("click", function(event){
     nuevoComentario.style.borderTop = '1px solid #f9b4c8';
     nuevoComentario.style.borderBottom = '1px solid #f9b4c8';
     nuevoComentario.style.padding = '10px';
-
-    //Recuperar datos de imagen y nickname
-
-    const nombre = sessionStorage.getItem("nickname");
-    const imagen = sessionStorage.getItem("archivo");
-
-    let nombreNuevo = document.createElement("p");
-    nombreNuevo.textContent = nombre;
-
-    let fotoPerfil = document.createElement('img');
-    fotoPerfil.src = imagen;
-    fotoPerfil.width = 50;
-    fotoPerfil.height = 50;
-    fotoPerfil.style.borderRadius = "50%";
-
-    nuevoComentario.appendChild(fotoPerfil);
-    nuevoComentario.appendChild(nombreNuevo);
     contenedor.appendChild(nuevoComentario);
+
     }else{
         alert('Tu comentario está vacío. Intenta otra vez.')
     }
