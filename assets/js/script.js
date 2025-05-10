@@ -9,7 +9,15 @@ botonEnviar.addEventListener("click", function(event){
     event.preventDefault();
     
     if(valorInput.value !== ''){
+    
+    //Agregar nickname al comentario: 
+    let nombre = prompt('Ingresa tu nickname');
+    let contenedorNombre = document.createElement('span')    
+    contenedorNombre.textContent = nombre + ' bloomió:';
+    contenedorNombre.style.fontWeight = '700'
+    contenedor.appendChild(contenedorNombre);
 
+    //Creación de comentario
     let nuevoComentario = document.createElement('li');
     nuevoComentario.textContent = valorInput.value
     valorInput.value = ''
